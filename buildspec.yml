@@ -9,7 +9,10 @@ phases:
       - dpkg -i hugo.deb
   build:
     commands:
+      - echo Hugo Version
       - hugo version
+      - echo Pulling theme code
+      - git submodule update --init --recursive
       - cd src
       - pwd
       - ls -lhra
