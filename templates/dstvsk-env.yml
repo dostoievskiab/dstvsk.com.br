@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Setup AWS environment using Route 53, Cloudfront and S3  for static website
+Description: Setup AWS environment using Cloudfront and S3 for static website
 
 Resources:
   # Here we have the S3 bucket that will host our files
