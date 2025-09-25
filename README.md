@@ -9,10 +9,10 @@ In this repository you will find everything that makes my personal blog, dstvsk.
 ### Pipeline
 I have setup simple pipeline here: Everytime we submit a commit to the main branch, AWS CodePipeline will:
 - Pull the code from Github
-- Build generate the static files using Hugo
+- Generate the static files using hugo
 - Update the S3 bucket with the new content
 
-You can check the `buildspec.yml` to see what is running on CodeBuild.
+You can check the `buildspec.yml` file to see which commands are running in CodeBuild.
 ![Pipeline](docs/pipeline.png)
 
 ### Running the Hugo project locally
