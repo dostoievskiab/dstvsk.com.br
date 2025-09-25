@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - apt-get -qq install hugo
+  build:
+    commands:
+      - cd src && hugo build --minify
+artifacts:
+  files:
+    - 'src/*'
+  base-directory: 'src/public'

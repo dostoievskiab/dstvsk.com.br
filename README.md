@@ -3,11 +3,11 @@
 In this repository you will find everything that makes my personal blog, dstvsk.com.br, from the CloudFormation template to the Hugo project setup.
 - folder `src`: Hugo setup using blowfish theme.
 - folder `templates`: Holds the AWS CloudFormation templates that creates the stacks in my AWS account.
-- file `buildspec.yaml`: CodeBuild configuration.
+- file `buildspec.yml`: CodeBuild configuration.
 - folder `src/content`: Where I will add the actual content of the blog.
 
 ### Pipeline
-We are using AWS CodePipeline to deploy the 
+Here I will setup a simple pipeline: Everytime we submit a commit to the master branch, AWS CodePipeline will generate the blog and update the S3 bucket with the new content.
 
 ### Running the Hugo project locally
 - First we move to the folder `cd src`
@@ -28,3 +28,6 @@ aws cloudformation update-stack --stack-name dstvsk-env --template-body file://.
 ```
 Here is the stack created and updated:
 ![CloudFormation stack](docs/cf-stack.png)
+
+### Improvements for the future
+- Add the pipeline and Route53 configuration to CloudFormation
