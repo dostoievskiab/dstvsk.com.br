@@ -3,7 +3,10 @@ version: 0.2
 phases:
   install:
     commands:
-      - apt install -y hugo
+      - apt-get update
+      - apt-get install -y curl
+      - curl -s -L https://github.com/gohugoio/hugo/releases/download/v0.147.6/hugo_0.147.6_linux-amd64.deb -o hugo.deb
+      - dpkg -i hugo.deb
   build:
     commands:
       - hugo version
