@@ -7,7 +7,13 @@ In this repository you will find everything that makes my personal blog, dstvsk.
 - folder `src/content`: Where I will add the actual content of the blog.
 
 ### Pipeline
-Here I will setup a simple pipeline: Everytime we submit a commit to the master branch, AWS CodePipeline will generate the blog and update the S3 bucket with the new content.
+I have setup simple pipeline here: Everytime we submit a commit to the main branch, AWS CodePipeline will:
+- Pull the code from Github
+- Build generate the static files using Hugo
+- Update the S3 bucket with the new content
+
+You can check the `buildspec.yml` to see what is running on CodeBuild.
+![Pipeline](docs/pipeline.png)
 
 ### Running the Hugo project locally
 - First we move to the folder `cd src`
