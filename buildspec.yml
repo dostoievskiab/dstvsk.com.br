@@ -11,8 +11,10 @@ phases:
     commands:
       - hugo version
       - cd src
-      - hugo --minify
+      - pwd
+      - ls -lhra
+      - hugo --gc --minify
 artifacts:
   files:
-    - 'src/*'
+    - '**/*'
   base-directory: 'src/public'  
